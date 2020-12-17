@@ -28,15 +28,15 @@ initially I thought of simply following the GIGO (garbage in garbage out) princi
 however, Kaggle wants a certain size to the result file, so we will replace the NA<br />
 values with the mean
 
-###age
+### age
 dataTrain[is.na(dataTrain$Age),"Age"] <- mean(dataTrain$Age,na.rm = TRUE)
 dataTest[is.na(dataTest$Age),"Age"] <- mean(dataTest$Age,na.rm = TRUE)
 
-###fare
+### fare
 dataTrain[is.na(dataTrain$Fare),"Fare"] <- mean(dataTrain$Fare,na.rm = TRUE)
 dataTest[is.na(dataTest$Fare),"Fare"] <- mean(dataTest$Fare,na.rm = TRUE)
 
-###could further clean it with regards to Parch or SibSp, etc
+### could further clean it with regards to Parch or SibSp, etc
 
 ### NOTE: What could have impacted the survival of a person? <br />
 Most certainly Age and Gender -> women and children first, in evacuation, then PClass and Fare<br />
